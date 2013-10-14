@@ -22,6 +22,13 @@ stylus(css)
   });
 ```
 
+You can also target specific browsers if you want as such:
+
+```js
+stylus(css)
+  .use(autoprefixer('ie 7', 'ie 8'))
+```
+
 If you'd like to install globally and run from the command line, you can do it like this:
 
 ```js
