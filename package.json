@@ -8,7 +8,8 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "should": "*"
+    "should": "*",
+    "stylus": "*"
   },
   "author": "Jeff Escalante",
   "main": "index.js",
