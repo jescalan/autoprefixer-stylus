@@ -1,0 +1,24 @@
+{
+  "name": "autoprefixer-stylus",
+  "description": "autoprefixer for stylus",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jenius/autoprefixer-stylus.git"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "author": "Jeff Escalante",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "dependencies": {
+    "autoprefixer": "0.8.x"
+  }
+}
