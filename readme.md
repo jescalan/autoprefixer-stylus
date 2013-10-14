@@ -22,6 +22,13 @@ stylus(css)
   });
 ```
 
+If you'd like to install globally and run from the command line, you can do it like this:
+
+```js
+npm install -g autoprefixer-stylus
+stylus -u autoprefixer-stylus -c example.styl
+```
+
 License (MIT)
 -------------
 
