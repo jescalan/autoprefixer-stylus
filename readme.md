@@ -3,6 +3,8 @@ Autoprefixer Stylus
 
 An [autoprefixer](https://github.com/ai/autoprefixer) plugin for stylus.
 
+[![tests](https://travis-ci.org/jenius/autoprefixer-stylus.png?branch=master)](https://travis-ci.org/jenius/autoprefixer-stylus)
+
 ### Installation
 
 Just run `npm install autoprefixer-stylus --save` in your project's directory.
