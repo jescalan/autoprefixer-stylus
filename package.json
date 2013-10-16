@@ -10,7 +10,8 @@
   "devDependencies": {
     "mocha": "*",
     "should": "*",
-    "stylus": "*"
+    "stylus": "*",
+    "coffee-script": "*"
   },
   "author": "Jeff Escalante",
   "main": "index.js",
