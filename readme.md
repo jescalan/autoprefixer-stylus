@@ -4,10 +4,11 @@ Autoprefixer Stylus
 An [autoprefixer](https://github.com/ai/autoprefixer) plugin for stylus.
 
 [![tests](https://travis-ci.org/jenius/autoprefixer-stylus.png?branch=master)](https://travis-ci.org/jenius/autoprefixer-stylus)
+[![npm](https://badge.fury.io/js/autoprefixer-stylus.png)](http://badge.fury.io/js/autoprefixer-stylus)
 
 ### Installation
 
-Just run `npm install autoprefixer-stylus --save` in your project's directory.
+You can install through npm as such: `npm install autoprefixer-stylus`
 
 ### Usage
 
