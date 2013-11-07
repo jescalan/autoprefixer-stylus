@@ -4,9 +4,9 @@ module.exports = function() {
   var args = Array.prototype.slice.call(arguments);
 
   return function(style){
-    style.on('end', function(css, cb){
-      if (args) return cb(null, autoprefixer.apply(this, args).compile(css));
-      cb(null, autoprefixer.compile(css));
+    this.on('end', function(err, css){
+      if (args) return autoprefixer.apply(this, args).compile(css);
+      autoprefixer.compile(css);
     });
   }
 
