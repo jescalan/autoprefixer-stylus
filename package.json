@@ -12,7 +12,10 @@
     "should": "*",
     "stylus": "*",
     "coffee-script": "*",
-    "css-parse": "~1.7.0"
+    "css-parse": "*",
+    "coveralls": "2.x",
+    "mocha-lcov-reporter": "0.0.1",
+    "istanbul": "0.2.x"
   },
   "author": "Jeff Escalante",
   "main": "index.js",
@@ -24,5 +27,8 @@
   },
   "dependencies": {
     "autoprefixer": "1.0.x"
+  },
+  "scripts": {
+    "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage;"
   }
 }

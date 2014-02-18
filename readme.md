@@ -5,6 +5,7 @@ An [autoprefixer](https://github.com/ai/autoprefixer) plugin for stylus.
 
 [![tests](https://travis-ci.org/jenius/autoprefixer-stylus.png?branch=master)](https://travis-ci.org/jenius/autoprefixer-stylus)
 [![npm](https://badge.fury.io/js/autoprefixer-stylus.png)](http://badge.fury.io/js/autoprefixer-stylus)
+[![coverage](https://coveralls.io/repos/jenius/autoprefixer-stylus/badge.png)](https://coveralls.io/r/jenius/autoprefixer-stylus)
 
 ### Installation
 
