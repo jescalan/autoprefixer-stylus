@@ -11,7 +11,8 @@
     "mocha": "*",
     "should": "*",
     "stylus": "*",
-    "coffee-script": "*"
+    "coffee-script": "*",
+    "css-parse": "~1.7.0"
   },
   "author": "Jeff Escalante",
   "main": "index.js",
@@ -22,6 +23,6 @@
     "node": ">=0.8.0"
   },
   "dependencies": {
-    "autoprefixer": "0.8.x"
+    "autoprefixer": "1.0.x"
   }
 }
