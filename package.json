@@ -1,7 +1,7 @@
 {
   "name": "autoprefixer-stylus",
   "description": "autoprefixer for stylus",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -26,6 +26,6 @@
     "node": ">=0.8.0"
   },
   "dependencies": {
-    "autoprefixer": "1.1.x"
+    "autoprefixer": "2.x"
   }
 }
