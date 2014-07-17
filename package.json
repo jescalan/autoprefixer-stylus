@@ -15,7 +15,8 @@
     "css-parse": "*",
     "coveralls": "2.x",
     "mocha-lcov-reporter": "0.0.1",
-    "istanbul": "0.2.x"
+    "istanbul": "0.2.x",
+    "autoprefixer": "2.x"
   },
   "author": "Jeff Escalante",
   "main": "index.js",
@@ -27,6 +28,8 @@
     "node": ">=0.8.0"
   },
   "dependencies": {
-    "autoprefixer": "2.x"
+  },
+  "peerDependencies": {
+    "autoprefixer": "*"
   }
 }
