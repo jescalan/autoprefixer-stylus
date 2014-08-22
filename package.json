@@ -20,13 +20,14 @@
   "author": "Jeff Escalante",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test",
-    "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage;"
+    "test": "mocha",
+    "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
+    "coverage": "istanbul cover _mocha --report html -- -R spec && open coverage/index.html"
   },
   "engines": {
     "node": ">=0.8.0"
   },
   "dependencies": {
-    "autoprefixer": "2.x"
+    "autoprefixer-core": "3.x"
   }
 }

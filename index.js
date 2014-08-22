@@ -1,4 +1,4 @@
-var ap = require('autoprefixer');
+var ap = require('autoprefixer-core');
 
 /**
  * Returns a stylus function that autoprefixes css.
@@ -12,15 +12,13 @@ var ap = require('autoprefixer');
  * @return {Function} - stylus plugin function
  */
 
-module.exports = function() {
-  var args = Array.prototype.slice.call(arguments);
-  args = args.filter(function(i){ return typeof i === 'string' });
+module.exports = function(opts) {
 
   return function(style){
     style = this || style;
 
     style.on('end', function(err, css){
-      if (args.length) { return ap.apply(ap, args).process(css).css; }
+      if (opts) { return ap(opts).process(css).css; }
       return ap.process(css).css;
     });
 
