@@ -3,10 +3,10 @@ Autoprefixer Stylus
 
 An [autoprefixer](https://github.com/ai/autoprefixer) plugin for stylus.
 
-[![tests](https://travis-ci.org/jenius/autoprefixer-stylus.svg?branch=master)](https://travis-ci.org/jenius/autoprefixer-stylus)
-[![npm](https://badge.fury.io/js/autoprefixer-stylus.svg)](http://badge.fury.io/js/autoprefixer-stylus)
-[![coverage](http://img.shields.io/coveralls/jenius/autoprefixer-stylus.svg)](https://coveralls.io/r/jenius/autoprefixer-stylus)
-[![dependencies](https://david-dm.org/jenius/autoprefixer-stylus.svg)](https://david-dm.org/jenius/autoprefixer-stylus)
+[![npm](http://img.shields.io/npm/v/autoprefixer-stylus.svg?style=flat)](http://badge.fury.io/js/autoprefixer-stylus)
+[![tests](http://img.shields.io/travis/jenius/autoprefixer-stylus/v3.svg?style=flat)](https://travis-ci.org/jenius/autoprefixer-stylus)
+[![coverage](http://img.shields.io/coveralls/jenius/autoprefixer-stylus/v3.svg?style=flat.svg)](https://coveralls.io/r/jenius/autoprefixer-stylus)
+[![dependencies](http://img.shields.io/gemnasium/jenius/autoprefixer-stylus.svg?style=flat)](https://gemnasium.com/jenius/autoprefixer-stylus)
 
 ### Installation
 
