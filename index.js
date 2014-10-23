@@ -1,4 +1,5 @@
-var ap = require('autoprefixer-core');
+var ap = require('autoprefixer-core'),
+    path = require('path');
 
 /**
  * Returns a stylus function that autoprefixes css.
@@ -16,10 +17,19 @@ module.exports = function(opts) {
 
   return function(style){
     style = this || style;
+    var filename = style.options.filename;
 
     style.on('end', function(err, css){
-      if (opts) { return ap(opts).process(css).css; }
-      return ap.process(css).css;
+      process_opts = {
+        from: filename,
+        to: path.join(
+          path.dirname(filename),
+          path.basename(filename, path.extname(filename))
+        ) + '.css'
+      }
+
+      if (opts) { return ap(opts).process(css, process_opts).css; }
+      return ap.process(css, process_opts).css;
     });
 
   }

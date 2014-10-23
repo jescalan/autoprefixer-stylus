@@ -1,9 +1,7 @@
-should = require 'should'
-fs = require 'fs'
-path = require 'path'
-autoprefixer = require '../index'
-stylus = require 'stylus'
-parse = require 'css-parse'
+fs        = require 'fs'
+path      = require 'path'
+stylus    = require 'stylus'
+parse     = require 'css-parse'
 test_path = path.join(__dirname, 'fixtures')
 
 match_expected = (file, args, done) ->
@@ -25,3 +23,16 @@ describe 'basic', ->
 
   it "takes browser options", (done) ->
     match_expected('browser.styl', { browsers: ['ie 7', 'ie 8'] }, done)
+
+  it "returns the correct sourcemap path", (done) ->
+    filename = path.join(test_path, 'basic.styl')
+
+    style = stylus(fs.readFileSync(filename, 'utf8'))
+      .set('sourcemap', true)
+      .set('filename', filename)
+      .use(autoprefixer())
+
+    style.render (err, css) ->
+        style.sourcemap.should.be.an('object')
+        style.sourcemap.file.should.equal('basic.css')
+        done()
