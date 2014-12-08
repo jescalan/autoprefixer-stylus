@@ -28,6 +28,6 @@
     "node": ">=0.8.0"
   },
   "dependencies": {
-    "autoprefixer-core": "3.x"
+    "autoprefixer-core": "4.x"
   }
 }
