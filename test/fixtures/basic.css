@@ -1,4 +1,5 @@
 p {
-  -webkit-transition: all 1s ease;
-          transition: all 1s ease;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }

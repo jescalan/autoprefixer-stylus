@@ -36,3 +36,6 @@ describe 'basic', ->
         style.sourcemap.should.be.an('object')
         style.sourcemap.file.should.equal('basic.css')
         done()
+
+  # How am I supposed to test this...
+  it "combines stylus' and autoprefixers' sourcemaps"

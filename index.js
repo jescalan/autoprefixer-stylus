@@ -1,4 +1,5 @@
 var ap = require('autoprefixer-core'),
+    map = require('source-map'),
     path = require('path');
 
 /**
@@ -14,12 +15,15 @@ var ap = require('autoprefixer-core'),
  */
 
 module.exports = function(opts) {
+  if (!opts) { opts = {}; }
 
   return function(style){
     style = this || style;
     var filename = style.options.filename;
 
     style.on('end', function(err, css){
+
+      // configure the options to be passed to autoprefixer
       process_opts = {
         from: filename,
         to: path.join(
@@ -28,8 +32,26 @@ module.exports = function(opts) {
         ) + '.css'
       }
 
-      if (opts) { return ap(opts).process(css, process_opts).css; }
-      return ap.process(css, process_opts).css;
+      // if there is a stylus sourcemap, ensure autoprefixer also generates one
+      if (style.sourcemap) {
+        process_opts.map = { annotation: false }
+      }
+
+      // run autoprefixer
+      var res = ap(opts).process(css, process_opts);
+
+      // if sourcemaps are generated, combine the two
+      if (res.map && style.sourcemap) {
+        var Generator = map.SourceMapGenerator;
+        var Consumer = map.SourceMapConsumer;
+
+        var generator = Generator.fromSourceMap(new Consumer(res.map.toString()));
+        generator.applySourceMap(new Consumer(style.sourcemap));
+        style.sourcemap = JSON.parse(generator.toString());
+      }
+
+      // return the css output
+      return res.css;
     });
 
   }
