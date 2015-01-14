@@ -1,5 +1,5 @@
 var ap = require('autoprefixer-core'),
-    map = require('source-map'),
+    map = require('multi-stage-sourcemap'),
     path = require('path');
 
 /**
@@ -42,12 +42,13 @@ module.exports = function(opts) {
 
       // if sourcemaps are generated, combine the two
       if (res.map && style.sourcemap) {
-        var Generator = map.SourceMapGenerator;
-        var Consumer = map.SourceMapConsumer;
+        var combined_map = map.transfer({
+          fromSourceMap: res.map.toString(),
+          toSourceMap: style.sourcemap
+        });
 
-        var generator = Generator.fromSourceMap(new Consumer(res.map.toString()));
-        generator.applySourceMap(new Consumer(style.sourcemap));
-        style.sourcemap = JSON.parse(generator.toString());
+        // then set the combined result as the new sourcemap
+        style.sourcemap = JSON.parse(combined_map);
       }
 
       // return the css output

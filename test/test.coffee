@@ -24,7 +24,7 @@ describe 'basic', ->
   it "takes browser options", (done) ->
     match_expected('browser.styl', { browsers: ['ie 7', 'ie 8'] }, done)
 
-  it "returns the correct sourcemap path", (done) ->
+  it "returns correct sourcemaps", (done) ->
     filename = path.join(test_path, 'basic.styl')
 
     style = stylus(fs.readFileSync(filename, 'utf8'))
@@ -33,9 +33,9 @@ describe 'basic', ->
       .use(autoprefixer())
 
     style.render (err, css) ->
+        if err then return done(err)
         style.sourcemap.should.be.an('object')
-        style.sourcemap.file.should.equal('basic.css')
+        style.sourcemap.sources[0].should.equal('stylus')
+        style.sourcemap.version.should.equal(3)
+        style.sourcemap.mappings.should.equal('AAAA;EACE,uBAAA;EAAA,sBAAA;EAAA,eAAA')
         done()
-
-  # How am I supposed to test this...
-  it "combines stylus' and autoprefixers' sourcemaps"

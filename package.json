@@ -29,6 +29,6 @@
   },
   "dependencies": {
     "autoprefixer-core": "4.x",
-    "source-map": "0.1.x"
+    "multi-stage-sourcemap": "0.2.x"
   }
 }
