@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "autoprefixer-core": "5.x",
-    "multi-stage-sourcemap": "0.2.x"
+    "multi-stage-sourcemap": "0.2.x",
+    "postcss": "4.x"
   }
 }
