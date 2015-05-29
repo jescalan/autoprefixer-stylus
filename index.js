@@ -52,6 +52,8 @@ module.exports = function(opts) {
         style.sourcemap = JSON.parse(combined_map);
       }
 
+      res.warnings().forEach(console.error);
+
       // return the css output
       return res.css;
     });
