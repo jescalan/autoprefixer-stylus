@@ -37,5 +37,5 @@ describe 'basic', ->
         style.sourcemap.should.be.an('object')
         style.sourcemap.sources[0].should.equal('stylus')
         style.sourcemap.version.should.equal(3)
-        style.sourcemap.mappings.should.equal('AAAA;EACE,sBAAA;EAAA,uBAAA;EAAA,sBAAA;EAAA,eAAA')
+        style.sourcemap.mappings.should.equal('AAAA;EACE,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA')
         done()
