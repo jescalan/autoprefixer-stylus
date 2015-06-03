@@ -1,4 +1,5 @@
 var ap = require('autoprefixer-core'),
+    postcss = require('postcss'),
     map = require('multi-stage-sourcemap'),
     path = require('path');
 
@@ -38,7 +39,7 @@ module.exports = function(opts) {
       }
 
       // run autoprefixer
-      var res = ap(opts).process(css, process_opts);
+      var res = postcss([ap(opts)]).process(css, process_opts);
 
       // if sourcemaps are generated, combine the two
       if (res.map && style.sourcemap) {
@@ -50,6 +51,8 @@ module.exports = function(opts) {
         // then set the combined result as the new sourcemap
         style.sourcemap = JSON.parse(combined_map);
       }
+
+      res.warnings().forEach(console.error);
 
       // return the css output
       return res.css;
