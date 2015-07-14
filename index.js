@@ -11,7 +11,7 @@ var ap = require('autoprefixer-core'),
  * - Returns a function for stylus to use
  * - This function uses the `end` event, and runs autoprefixer on
  *   the css, applying any arguments if present
- *   
+ *
  * @return {Function} - stylus plugin function
  */
 
@@ -25,7 +25,7 @@ module.exports = function(opts) {
     style.on('end', function(err, css){
 
       // configure the options to be passed to autoprefixer
-      process_opts = {
+      var process_opts = {
         from: filename,
         to: path.join(
           path.dirname(filename),
