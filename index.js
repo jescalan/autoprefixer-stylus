@@ -1,4 +1,4 @@
-var ap = require('autoprefixer-core'),
+var ap = require('autoprefixer'),
     postcss = require('postcss'),
     map = require('multi-stage-sourcemap'),
     path = require('path');
