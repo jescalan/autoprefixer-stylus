@@ -15,7 +15,7 @@
     "istanbul": "0.4.1",
     "mocha": "2.3.4",
     "mocha-lcov-reporter": "1.0.0",
-    "stylus": "0.52.4"
+    "stylus": "0.53.0"
   },
   "author": "Jeff Escalante",
   "main": "index.js",
