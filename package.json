@@ -14,7 +14,7 @@
     "css-parse": "2.0.0",
     "istanbul": "0.4.2",
     "mocha": "2.4.5",
-    "mocha-lcov-reporter": "1.0.0",
+    "mocha-lcov-reporter": "1.1.0",
     "stylus": "0.53.0"
   },
   "author": "Jeff Escalante",
