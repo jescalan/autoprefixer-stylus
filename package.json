@@ -30,6 +30,6 @@
   "dependencies": {
     "autoprefixer": "6.3.6",
     "multi-stage-sourcemap": "0.2.1",
-    "postcss": "5.0.19"
+    "postcss": "5.0.20"
   }
 }
