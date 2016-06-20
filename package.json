@@ -12,7 +12,7 @@
     "coffee-script": "1.10.0",
     "coveralls": "2.11.9",
     "css-parse": "2.0.0",
-    "istanbul": "0.4.3",
+    "istanbul": "0.4.4",
     "mocha": "2.5.3",
     "mocha-lcov-reporter": "1.2.0",
     "stylus": "0.54.5"
