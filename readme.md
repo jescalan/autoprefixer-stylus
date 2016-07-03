@@ -4,9 +4,9 @@ Autoprefixer Stylus
 An [autoprefixer](https://github.com/postcss/autoprefixer) plugin for stylus.
 
 [![npm](https://img.shields.io/npm/v/autoprefixer-stylus.svg?style=flat)](http://badge.fury.io/js/autoprefixer-stylus)
-[![tests](https://img.shields.io/travis/jenius/autoprefixer-stylus/master.svg?style=flat)](https://travis-ci.org/jenius/autoprefixer-stylus)
-[![coverage](https://img.shields.io/coveralls/jenius/autoprefixer-stylus/master.svg?style=flat)](https://coveralls.io/r/jenius/autoprefixer-stylus)
-[![dependencies](https://img.shields.io/gemnasium/jenius/autoprefixer-stylus.svg?style=flat)](https://gemnasium.com/jenius/autoprefixer-stylus)
+[![tests](https://img.shields.io/travis/jescalan/autoprefixer-stylus/master.svg?style=flat)](https://travis-ci.org/jescalan/autoprefixer-stylus)
+[![coverage](https://img.shields.io/coveralls/jescalan/autoprefixer-stylus/master.svg?style=flat)](https://coveralls.io/r/jescalan/autoprefixer-stylus)
+[![dependencies](https://img.shields.io/gemnasium/jescalan/autoprefixer-stylus.svg?style=flat)](https://gemnasium.com/jescalan/autoprefixer-stylus)
 
 ### Installation
 
