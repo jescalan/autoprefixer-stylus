@@ -18,6 +18,10 @@ var ap = require('autoprefixer'),
 module.exports = function(opts) {
   if (!opts) { opts = {}; }
 
+  // pull `hideWarnings` out so we can pass opts to autoprefixer
+  var showWarnings = !opts.hideWarnings;
+  delete opts.hideWarnings;
+
   return function(style){
     style = this || style;
     var filename = style.options.filename;
@@ -52,7 +56,9 @@ module.exports = function(opts) {
         style.sourcemap = JSON.parse(combined_map);
       }
 
-      res.warnings().forEach(console.error);
+      if (showWarnings) {
+        res.warnings().forEach(console.error);
+      }
 
       // return the css output
       return res.css;
