@@ -34,6 +34,13 @@ stylus(css)
   .use(autoprefixer({ browsers: ['ie 7', 'ie 8'] }));
 ```
 
+By default, this plugin will display any warnings. You can disable this with the `hideWarnings` option. Example below:
+
+```js
+stylus(css)
+  .use(autoprefixer({hideWarnings: true});
+```
+
 If you'd like to install globally and run from the command line, you can do it like this:
 
 ```js
