@@ -25,7 +25,7 @@
     "coverage": "istanbul cover _mocha --report html -- -R spec && open coverage/index.html"
   },
   "engines": {
-    "node": ">=0.8.0"
+    "node": ">= 4"
   },
   "dependencies": {
     "autoprefixer": "6.5.1",
