@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "chai": "3.5.0",
-    "coffee-script": "1.12.3",
+    "coffee-script": "1.12.4",
     "coveralls": "2.11.16",
     "css-parse": "2.0.0",
     "istanbul": "0.4.5",
