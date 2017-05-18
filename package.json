@@ -28,7 +28,7 @@
     "node": ">= 4"
   },
   "dependencies": {
-    "autoprefixer": "7.1.0",
+    "autoprefixer": "7.1.1",
     "multi-stage-sourcemap": "0.2.1",
     "postcss": "6.0.1"
   }
