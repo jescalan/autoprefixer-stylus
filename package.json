@@ -8,7 +8,7 @@
     "url": "git://github.com/jescalan/autoprefixer-stylus.git"
   },
   "devDependencies": {
-    "chai": "3.5.0",
+    "chai": "4.0.1",
     "coffee-script": "1.12.6",
     "coveralls": "2.13.1",
     "css-parse": "2.0.0",
