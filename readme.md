@@ -1,5 +1,4 @@
-Autoprefixer Stylus
--------------------
+## Autoprefixer Stylus
 
 An [autoprefixer](https://github.com/postcss/autoprefixer) plugin for stylus.
 
@@ -17,12 +16,12 @@ You can install through npm as such: `npm install autoprefixer-stylus`
 You can include autoprefixer-stylus as a normal stylus plugin. Basic example below:
 
 ```js
-var stylus = require('stylus');
-var autoprefixer = require('autoprefixer-stylus');
+var stylus = require("stylus");
+var autoprefixer = require("autoprefixer-stylus");
 
 stylus(css)
   .use(autoprefixer())
-  .render(function(err, output){
+  .render(function(err, output) {
     console.log(output);
   });
 ```
@@ -30,8 +29,7 @@ stylus(css)
 This plugin also takes any of the [options that autoprefixer normally takes](), which at the time of writing is `browsers` and `cascade`. Example with `browsers` below:
 
 ```js
-stylus(css)
-  .use(autoprefixer({ browsers: ['ie 7', 'ie 8'] }));
+stylus(css).use(autoprefixer({ browsers: ["last 2 versions"] }));
 ```
 
 By default, this plugin will display any warnings. You can disable this with the `hideWarnings` option. Example below:

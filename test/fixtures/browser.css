@@ -1,3 +1,7 @@
 p {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  display: -ms-grid;
+  display: grid;
 }
