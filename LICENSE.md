@@ -1,4 +1,5 @@
-## License (MIT)
+License (MIT)
+-------------
 
 Copyright (c) 2013 Jeff Escalante
 
