@@ -1,4 +1,4 @@
-## Autoprefixer Stylus
+# Autoprefixer Stylus
 
 An [autoprefixer](https://github.com/postcss/autoprefixer) plugin for stylus.
 
@@ -7,11 +7,11 @@ An [autoprefixer](https://github.com/postcss/autoprefixer) plugin for stylus.
 [![coverage](https://img.shields.io/coveralls/jescalan/autoprefixer-stylus/master.svg?style=flat)](https://coveralls.io/r/jescalan/autoprefixer-stylus)
 [![dependencies](https://img.shields.io/david/jescalan/autoprefixer-stylus.svg?style=flat)](https://david-dm.org/jescalan/autoprefixer-stylus)
 
-### Installation
+## Installation
 
 You can install through npm as such: `npm install autoprefixer-stylus`
 
-### Usage
+## Usage
 
 You can include autoprefixer-stylus as a normal stylus plugin. Basic example below:
 
