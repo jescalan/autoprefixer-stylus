@@ -1,5 +1,5 @@
 p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }

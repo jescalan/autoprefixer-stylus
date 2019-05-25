@@ -10,6 +10,7 @@ match_expected = (file, args, done) ->
     .render (err, css) ->
       if err then return done(err)
       expected = fs.readFileSync(path.join(test_path, file.replace('.styl', '.css')), 'utf8')
+
       parse(css).should.eql(parse(expected))
       done()
 
@@ -37,5 +38,5 @@ describe 'basic', ->
         style.sourcemap.should.be.an('object')
         style.sourcemap.sources[0].should.equal('stylus')
         style.sourcemap.version.should.equal(3)
-        style.sourcemap.mappings.should.equal('AAAA;EACE,qBAAA;EAAA,qBAAA;EAAA,cAAA')
+        style.sourcemap.mappings.should.equal('AAAA;EACE,wBAAW;KAAX,qBAAW;UAAX,gBAAW')
         done()
