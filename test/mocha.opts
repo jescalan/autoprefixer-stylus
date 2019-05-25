@@ -1,3 +1,4 @@
 --reporter spec
---compilers coffee:coffee-script/register
+--require coffeescript/register
 --require test/support
+"./test/*.{js,coffee}"
