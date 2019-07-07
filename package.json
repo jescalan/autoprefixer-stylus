@@ -1,7 +1,7 @@
 {
   "name": "autoprefixer-stylus",
   "description": "autoprefixer for stylus",
-  "version": "0.14.0",
+  "version": "0.14.1",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -9,7 +9,6 @@
   },
   "devDependencies": {
     "chai": "4.2.0",
-    "coffee-script": "1.12.7",
     "coffeescript": "^2.4.1",
     "coveralls": "3.0.3",
     "css-parse": "2.0.0",
