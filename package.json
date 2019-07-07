@@ -13,7 +13,7 @@
     "coveralls": "3.0.3",
     "css-parse": "2.0.0",
     "mocha": "6.1.4",
-    "mocha-lcov-reporter": "1.3.0",
+    "nyc": "^14.1.1",
     "rimraf": "^2.6.3",
     "stylus": "0.54.5"
   },
@@ -21,7 +21,7 @@
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha",
-    "coveralls": "nyc report --reporter=lcov | coveralls && rimraf ./coverage",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls && rimraf ./coverage",
     "coverage": "nyc report --reporter=html && open coverage/index.html"
   },
   "engines": {
