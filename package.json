@@ -1,7 +1,7 @@
 {
   "name": "autoprefixer-stylus",
   "description": "autoprefixer for stylus",
-  "version": "0.14.0",
+  "version": "1.0.0",
   "author": "Jeff Escalante",
   "dependencies": {
     "autoprefixer": "9.6.1",
