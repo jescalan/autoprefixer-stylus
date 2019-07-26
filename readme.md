@@ -1,5 +1,4 @@
-Autoprefixer Stylus
--------------------
+## Autoprefixer Stylus
 
 An [autoprefixer](https://github.com/postcss/autoprefixer) plugin for stylus.
 
@@ -17,28 +16,27 @@ You can install through npm as such: `npm install autoprefixer-stylus`
 You can include autoprefixer-stylus as a normal stylus plugin. Basic example below:
 
 ```js
-var stylus = require('stylus');
-var autoprefixer = require('autoprefixer-stylus');
+const stylus = require('stylus')
+const autoprefixer = require('autoprefixer-stylus')
 
 stylus(css)
   .use(autoprefixer())
-  .render(function(err, output){
-    console.log(output);
-  });
+  .render(function(err, output) {
+    console.log(output)
+  })
 ```
 
-This plugin also takes any of the [options that autoprefixer normally takes](), which at the time of writing is `browsers` and `cascade`. Example with `browsers` below:
+This plugin also takes any of the [options that autoprefixer normally takes](https://github.com/postcss/autoprefixer#options). Example with `overrideBrowswerslist` below:
 
 ```js
-stylus(css)
-  .use(autoprefixer({ browsers: ['ie 7', 'ie 8'] }));
+stylus(css).use(autoprefixer({ overrideBrowserslist: ['ie 7', 'ie 8'] }))
 ```
 
 By default, this plugin will display any warnings. You can disable this with the `hideWarnings` option. Example below:
 
 ```js
 stylus(css)
-  .use(autoprefixer({hideWarnings: true});
+  .use(autoprefixer({ hideWarnings: true });
 ```
 
 If you'd like to install globally and run from the command line, you can do it like this:

@@ -1,4 +1,0 @@
---reporter spec
---require coffeescript/register
---require test/support
-"./test/*.{js,coffee}"

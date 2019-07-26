@@ -2,34 +2,31 @@
   "name": "autoprefixer-stylus",
   "description": "autoprefixer for stylus",
   "version": "0.14.0",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jescalan/autoprefixer-stylus.git"
+  "author": "Jeff Escalante",
+  "dependencies": {
+    "autoprefixer": "9.6.1",
+    "multi-stage-sourcemap": "0.3.1",
+    "postcss": "7.0.17"
   },
   "devDependencies": {
     "chai": "4.2.0",
     "coffeescript": "^2.4.1",
-    "coveralls": "3.0.3",
+    "coveralls": "3.0.5",
     "css-parse": "2.0.0",
-    "mocha": "6.1.4",
+    "mocha": "6.2.0",
     "nyc": "^14.1.1",
     "rimraf": "^2.6.3",
     "stylus": "0.54.5"
   },
-  "author": "Jeff Escalante",
-  "main": "index.js",
-  "scripts": {
-    "test": "nyc mocha",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls && rimraf ./coverage",
-    "coverage": "nyc report --reporter=html && open coverage/index.html"
-  },
   "engines": {
     "node": ">= 4"
   },
-  "dependencies": {
-    "autoprefixer": "9.5.1",
-    "multi-stage-sourcemap": "0.3.1",
-    "postcss": "7.0.16"
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "https://github.com/jescalan/autoprefixer-stylus",
+  "scripts": {
+    "coverage": "nyc report --reporter=html && open coverage/index.html",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls && rimraf ./coverage",
+    "test": "nyc mocha"
   }
 }

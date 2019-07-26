@@ -1,7 +1,7 @@
-var ap = require('autoprefixer'),
-    postcss = require('postcss'),
-    map = require('multi-stage-sourcemap'),
-    path = require('path');
+const autoprefixer = require('autoprefixer')
+const postcss = require('postcss')
+const map = require('multi-stage-sourcemap')
+const path = require('path')
 
 /**
  * Returns a stylus function that autoprefixes css.
@@ -15,55 +15,52 @@ var ap = require('autoprefixer'),
  * @return {Function} - stylus plugin function
  */
 
-module.exports = function(opts) {
-  if (!opts) { opts = {}; }
-
+module.exports = function(opts = {}) {
   // pull `hideWarnings` out so we can pass opts to autoprefixer
-  var showWarnings = !opts.hideWarnings;
-  delete opts.hideWarnings;
+  const showWarnings = !opts.hideWarnings
+  delete opts.hideWarnings
 
-  return function(style){
-    style = this || style;
-    var filename = style.options.filename;
+  return function(style) {
+    style = this || style
+    const filename = style.options.filename
 
-    style.on('end', function(err, css){
-
+    style.on('end', function(err, css) {
+      if (err) throw new Error(err)
       // configure the options to be passed to autoprefixer
-      var process_opts = {
+      const processOpts = {
         from: filename,
-        to: path.join(
-          path.dirname(filename),
-          path.basename(filename, path.extname(filename))
-        ) + '.css'
+        to:
+          path.join(
+            path.dirname(filename),
+            path.basename(filename, path.extname(filename))
+          ) + '.css'
       }
 
       // if there is a stylus sourcemap, ensure autoprefixer also generates one
       if (style.sourcemap) {
-        process_opts.map = { annotation: false }
+        processOpts.map = { annotation: false }
       }
 
       // run autoprefixer
-      var res = postcss([ap(opts)]).process(css, process_opts);
+      var res = postcss([autoprefixer(opts)]).process(css, processOpts)
 
       // if sourcemaps are generated, combine the two
       if (res.map && style.sourcemap) {
-        var combined_map = map.transfer({
+        var combinedMap = map.transfer({
           fromSourceMap: res.map.toString(),
           toSourceMap: style.sourcemap
-        });
+        })
 
         // then set the combined result as the new sourcemap
-        style.sourcemap = JSON.parse(combined_map);
+        style.sourcemap = JSON.parse(combinedMap)
       }
 
       if (showWarnings) {
-        res.warnings().forEach(console.error);
+        res.warnings().forEach(console.error)
       }
 
       // return the css output
-      return res.css;
-    });
-
+      return res.css
+    })
   }
-
 }
