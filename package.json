@@ -6,7 +6,7 @@
   "dependencies": {
     "autoprefixer": "9.6.1",
     "multi-stage-sourcemap": "0.3.1",
-    "postcss": "7.0.17"
+    "postcss": "8.2.10"
   },
   "devDependencies": {
     "chai": "4.2.0",
